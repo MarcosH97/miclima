@@ -35,12 +35,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     getLocation();
-    // getWeather();
     Service().getCities();
     super.initState();
   }
 
-  // Request? request;
   final controller = TextEditingController();
   static bool celsius = true;
   static String city = 'loading...';
@@ -160,7 +158,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(100),
                               borderSide: BorderSide(color: Colors.white)),
-                          suffixIcon: Icon(
+                          suffixIcon: const Icon(
                             Icons.search,
                             color: Colors.white,
                             size: 24,
@@ -169,7 +167,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       );
                     },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Column(
@@ -186,7 +184,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 });
                                 getLocation();
                               },
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.location_on,
                                 size: 42,
                                 color: Colors.white,
@@ -203,7 +201,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             'Latitude: ${weather.current != null ? weather.location!.lat! : '...'}',
                             style: TextStyle(color: Colors.grey, fontSize: 18),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Text(
@@ -217,7 +215,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   TextButton(
                     child: Text(
                       '${celsius ? tempc.toStringAsFixed(1) : tempf.toStringAsFixed(1)}º${celsius ? 'C' : 'F'}',
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.white,
                           fontSize: 60,
                           fontWeight: FontWeight.w200),
@@ -253,7 +251,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Text(
@@ -262,7 +260,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         : '...',
                     style: TextStyle(color: Colors.white, fontSize: 16),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 40,
                   ),
                   Row(
